@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: nginx:1.19.2
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
@@ -55,8 +55,8 @@ resources:
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   limits:
-  cpu: 100m
-  memory: 512Mi
+    cpu: 500m
+    memory: 512Mi
   requests:
     cpu: 100m
     memory: 128Mi
@@ -68,7 +68,7 @@ livenessProbe:
   timeoutSeconds: 5
   successThreshold: 1
   failureThreshold: 5
-
+ 
 readinessProbe:
   path: /
   initialDelaySeconds: 45
