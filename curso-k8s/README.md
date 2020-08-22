@@ -57,7 +57,7 @@ kubectl create namespace NAMESPACE
 
 ```bash
 helm list --all --all-namespaces
-
+```
 ## Parameters
 
 The following tables lists the configurable parameters of the chart and their default values.
